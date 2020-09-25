@@ -35,25 +35,31 @@ begin
         a <= (31 downto 4 => '0') & "1100";
         b <= (31 downto 4 => '0') & "1010";
 
+
         -- A NOR B
         -- assign the correct value to op to test A NOR B
+        op <= "00";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
 
         -- A AND B
         -- assign the correct value to op to test A AND B
+        op <= "01";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
 
         -- A OR B
         -- assign the correct value to op to test A OR B
+        op <= "10";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
 
         -- A XNOR B
         -- assign the correct value to op to test A XNOR B
+        op <= "11";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
+        
 
         wait;                           -- wait forever
     end process;
